@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>                                                          <!--HTML規格宣言-->
+ <html lang="ja">                                                        <!--文章が日本語であることを宣言-->
+  <head>
+   <meta charset="UTF-8">                                                <!--文字コード-->
+   <meta name= "description" content="">                                 <!-- ページ概要記載 -->
+   <title>丸喜阿保商店</title>                                           <!--タイトル-->
+   <link rel="stylesheet"href="abosyo_1_CSS.css">                          <!-- CSSファイル読み込み -->
+   <script src="./jquery-3.4.1.min.js"></script>                         <!-- JavaScriptファイル読み込み -->
+   <meta name="viewport" content="width=device-width,initial-scale=1.0"> <!-- レスポンシブWEB対応 -->
+ <script>
+
+   $(function(){
+    $('.contents').each(function(i, elem){
+        var contentsPOS = $(elem).offset().top;
+        $(window).on('load scroll resize', function(){
+            var winHeight = $(window).height();
+            var scrollTop = $(window).scrollTop();
+            var showClass = 'show';
+            var timing = 100; // 100pxコンテンツが見えたら次のif文がtrue
+            if (scrollTop >= contentsPOS - winHeight + timing){
+              $(elem).addClass(showClass);
+            } else {
+              $(elem).removeClass(showClass);
+            }
+        });
+    });
+});
+
+
+   </script>
+  </head>   
+   <body>
+     <section id="contents">
+    <div id="content01" class="contents">
+        <div id="content01_bg" class="background"></div>
+        <div class="wrap">
+        <div class="scroll-fade">
+             <syamei>
+              <h1>有限会社 丸喜阿保商店</h1>
+             </syamei>
+        </div>
+          <nav>
+      <ul>
+       <li><a href="abosyo_1_HTML.html">HOME</a></li>
+       <li><a href="#"class="current">会社概要</a></li>
+       <li><a href="abosyo_3_HTML.html">取扱商品</a></li>
+       <li><a href="abosyo_4_HTML.html">お問い合わせ</a></li>
+      </ul>
+      <center>
+       <br></br>
+       
+      <p class="Move"><size>贈り物から返礼品・催事に至るまで</size> </p>
+      <p class="Move"><size>美味しく楽しい食のひと時をお手伝いさせていただきます。</size> </p>
+       
+      </center>   
+
+     </nav>
+        </div>
+    </div><!-- content01 -->
+
+    <div id="content02" class="contents">
+        <div id="content02_bg" class="background"></div>
+        <div class="wrap">
+            <div class="text-box">
+              
+                <p class="catch"><size>代表あいさつ</size></p>
+               
+            </div>
+        </div>
+    </div><!-- content02 -->
+    <div id="content03" class="contents">
+        <div id="content03_bg" class="background"></div>
+        <div class="wrap">
+            <div class="text-box">
+                <p class="catch"><size>経営理念</size></p>
+                
+            </div>
+        </div>
+    </div><!-- content03 -->
+
+  <div id="content04" class="contents">
+        <div id="content04_bg" class="background"></div>
+        <div class="wrap">
+            <div class="text-box">
+              
+                <p class="catch"><size>会社概要</size></p>
+                
+             
+            </div>
+        </div>
+    </div><!-- content04 -->
+  <div id="content05" class="contents">
+        <div id="content05_bg" class="background"></div>
+        <div class="wrap">
+            <div class="text-box">
+              
+                <p class="catch"><size>社歴</size></p>
+                
+            </div>
+        </div>
+    </div><!-- content05 -->
+</section>
+  </body>
+   
+ </html>
